@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `db_Projeto_Integrador_Grupo1`.`tb_tema` (
   `id` BIGINT NOT NULL AUTO_INCREMENT,
   `descricao` VARCHAR(1000) NULL,
   `tipo` VARCHAR(2000) NOT NULL,
-  `data` DATE NULL,
+  `tag` VARCHAR(255) NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -45,8 +45,8 @@ CREATE TABLE IF NOT EXISTS `db_Projeto_Integrador_Grupo1`.`tb_postagem` (
   `id` BIGINT NOT NULL AUTO_INCREMENT,
   `Titulo` VARCHAR(50) NOT NULL,
   `texto` VARCHAR(5000) NOT NULL,
-  `Imagem` VARCHAR(255) NULL,
-  `tag` VARCHAR(255) NULL,
+  `Imagem` VARCHAR(255) NOT NULL,
+  `Data` DATE NULL,
   `tb_usuario_id` BIGINT NOT NULL,
   `tb_tema_id` BIGINT NOT NULL,
   PRIMARY KEY (`id`),
